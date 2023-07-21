@@ -8,6 +8,7 @@ This project contains implementations of various sorting algorithms in C. The fo
 - Insertion sort for doubly linked lists
 - Selection sort for arrays
 - Quick sort with Lomuto partition scheme (always choosing the last element as the pivot)
+- Shell sort using the Knuth sequence for arrays
 
 ## How to Use
 
@@ -17,7 +18,7 @@ To use these sorting algorithms, you can simply include the relevant header file
 - Insertion sort: `sort.h`, `insertion_sort_list(listint_t **list)`
 - Selection sort: `sort.h`, `selection_sort(int *array, size_t size)`
 - Quick sort: `sort.h`, `quick_sort(int *array, size_t size)`
-
+- - Shell sort: `sort.h`, `shell_sort(int *array, size_t size)`
 Each function takes an array or doubly linked list and its size as input, and sorts the array or list in ascending order. The implementations also print the array or list after each swapping operation, as required by the project specifications.
 
 ## How to Compile
