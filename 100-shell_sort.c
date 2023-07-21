@@ -20,9 +20,9 @@ void swap(int *a, int *b)
  * @size: the size of the array
  * Return: the gap
 */
-long get_gap(long size)
+size_t get_gap(size_t size)
 {
-	long gap = 1;
+	size_t gap = 1;
 
 	while (gap < size)
 	{
@@ -40,23 +40,21 @@ long get_gap(long size)
 */
 void shell_sort(int *array, size_t size)
 {
-	long gap, j, i;
+	size_t gap, j, i;
 
-	gap = get_gap((long) size);
+	gap = get_gap(size);
 	for (; gap >= 1; gap = (gap - 1) / 3)
 	{
-		for (j = gap; j < (long) size; j++)
+		for (j = gap; j < size; j++)
 		{
-			for (i = j - gap; i >= 0; i = i - gap)
+			for (i = j - gap; ; i = i - gap)
 			{
 				if (array[i + gap] < array[i])
-				{
 					swap(&array[i], &array[i + gap]);
-				}
 				else
-				{
 					break;
-				}
+				if (gap > i)
+					break;
 			}
 		}
 		print_array(array, size);
