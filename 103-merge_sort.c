@@ -107,6 +107,8 @@ void merge_sort(int *array, size_t size)
 	int *temp_arr;
 
 	temp_arr = malloc(size * sizeof(int));
+	if (temp_arr == NULL)
+		return;
 	merge_sorting(array, 0, size, temp_arr);
 	free(temp_arr);
 }

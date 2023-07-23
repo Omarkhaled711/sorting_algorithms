@@ -28,8 +28,7 @@ size_t get_gap(size_t size)
 	{
 		gap = 3 * gap + 1;
 	}
-	if (gap > (size - 1))
-		gap = (gap - 1) / 3;
+	gap = (gap - 1) / 3;
 	return (gap);
 }
 /**
