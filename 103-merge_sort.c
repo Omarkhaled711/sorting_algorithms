@@ -86,7 +86,7 @@ void merge_sorting(int *array, size_t left, size_t right, int *temp_arr)
 {
 	int mid;
 
-	if (left >= right - 1)
+	if (left + 1 >= right)
 		return;
 
 	mid = left + (right - left) / 2;

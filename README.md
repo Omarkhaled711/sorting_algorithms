@@ -11,6 +11,7 @@ This project contains implementations of various sorting algorithms in C. The fo
 - Shell sort using the Knuth sequence for arrays
 - Count sort for arrays
 - Merge sort for arrays
+- Heap sort for arrays
 - Radix sort for arrays
   
 ## How to Use
@@ -24,7 +25,9 @@ To use these sorting algorithms, you can simply include the relevant header file
 - Shell sort: `sort.h`, `shell_sort(int *array, size_t size)`
 - Count sort: `sort.h`, `counting_sort(int *array, size_t size)`
 - Merge sort: `sort.h`, `merge_sort(int *array, size_t size)`
+- Heap sort: `sort.h`, `heap_sort(int *array, size_t size)`
 - Radix sort: `sort.h`, `radix_sort(int *array, size_t size)`
+
 Each function takes an array or doubly linked list and its size as input, and sorts the array or list in ascending order. The implementations also print the array or list after each swapping operation, as required by the project specifications.
 
 ## How to Compile
